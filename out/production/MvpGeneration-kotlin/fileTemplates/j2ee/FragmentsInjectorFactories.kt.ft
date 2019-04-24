@@ -1,0 +1,15 @@
+package ${PACKAGE_NAME}
+
+import android.support.v4.app.Fragment
+import dagger.Binds
+import dagger.Module
+import dagger.android.AndroidInjector
+import dagger.android.support.FragmentKey
+import dagger.multibindings.IntoMap
+
+#parse("File Header.java")
+@Module(subcomponents = arrayOf(
+))
+abstract class FragmentsInjectorFactories {
+
+}

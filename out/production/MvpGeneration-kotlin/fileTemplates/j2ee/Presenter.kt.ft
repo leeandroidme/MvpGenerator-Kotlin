@@ -1,0 +1,17 @@
+package ${PACKAGE_NAME}
+
+abstract class Presenter<IVIEW> : IPresenter<IVIEW> {
+
+    var iview: IVIEW? = null
+
+    override fun onViewAttached(iview: IVIEW, created: Boolean) {
+        this.iview = iview
+    }
+
+    override fun onViewDetached() {
+        this.iview = null
+    }
+
+    override fun onDestroy() {
+    }
+}

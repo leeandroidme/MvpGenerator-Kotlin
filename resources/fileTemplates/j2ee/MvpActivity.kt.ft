@@ -1,0 +1,64 @@
+package ${PACKAGE_NAME}
+
+import android.os.Bundle
+import android.app.Activity
+import ${COMMON_PACKAGE}.IPresenter
+
+import javax.inject.Inject
+
+import dagger.android.AndroidInjection
+
+abstract class MvpActivity<PRESENTER : IPresenter<IVIEW>, IVIEW> : BaseActivity() {
+
+    @Inject
+    protected lateinit var presenter: PRESENTER
+
+    public override fun onCreate(savedInstanceState: Bundle?) {
+        AndroidInjection.inject(this)
+        super.onCreate(savedInstanceState)
+    }
+
+    fun getExtraPresenters(): Array<IPresenter<IVIEW>>? = null
+    @Override
+    public override fun onStart() {
+        super.onStart()
+        doStart()
+    }
+
+    @Override
+    public override fun onStop() {
+        if (presenter != null) presenter.onViewDetached()
+        val extraPresenters = getExtraPresenters()
+        if (extraPresenters != null && extraPresenters.isNotEmpty()) {
+            for (p in extraPresenters) {
+                p.onViewDetached()
+            }
+        }
+        super.onStop()
+    }
+
+    @Override
+    public override fun onDestroy() {
+        presenter.onDestroy()
+        var extraPresenters = getExtraPresenters()
+        if (extraPresenters != null && extraPresenters.isNotEmpty()) {
+            for (p in extraPresenters) {
+                p.onDestroy()
+            }
+        }
+        super.onDestroy()
+    }
+
+    private var firstStart: Boolean = true
+
+    private fun doStart() {
+        presenter!!.onViewAttached(this as IVIEW, firstStart)
+        var extraPresenters = getExtraPresenters()
+        if (extraPresenters != null && extraPresenters.isNotEmpty()) {
+            for (p in extraPresenters) {
+                p.onViewAttached(this, firstStart)
+            }
+        }
+        firstStart = false
+    }
+}

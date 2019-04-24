@@ -1,0 +1,13 @@
+package ${PACKAGE_NAME}
+
+import android.content.Context
+import dagger.Module
+import dagger.Provides
+
+#parse("File Header.java")
+@Module
+class ${ACTIVITY_NAME}ActivityModule {
+
+    @Provides
+    fun provide${ACTIVITY_NAME}Presenter():${ACTIVITY_NAME}ActivityContract.I${ACTIVITY_NAME}Presenter =${ACTIVITY_NAME}ActivityPresenter()
+}

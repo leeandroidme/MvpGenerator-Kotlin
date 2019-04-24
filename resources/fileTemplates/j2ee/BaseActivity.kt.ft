@@ -1,0 +1,83 @@
+package com.newland.cmt.di.base
+
+import android.app.Activity
+import android.os.Bundle
+import android.view.View
+import butterknife.ButterKnife
+import butterknife.Unbinder
+
+/**
+ * @author: leellun
+ * @data: 2018/12/19.
+ */
+abstract class BaseActivity : Activity() {
+
+    private var unbinder: Unbinder? = null
+    /**
+     * @return 当前activity
+     * @Time 2015年12月7日下午5:56:27
+     */
+    fun getActivity(): Activity = this
+
+    /**
+     * 获取布局id
+     *
+     * @author LiuLun
+     * @Time 2015年11月9日下午5:09:16
+     */
+    protected abstract fun getLayoutId(): Int
+
+    override fun setContentView(view: View) {
+        super.setContentView(view)
+        //在setContentView之后bind
+        unbinder = ButterKnife.bind(this)
+    }
+
+    override fun setContentView(layoutResID: Int) {
+        super.setContentView(layoutResID)
+        //在setContentView之后bind
+        unbinder = ButterKnife.bind(this)
+    }
+
+    public override fun onDestroy() {
+        super.onDestroy()
+
+        if (unbinder != null) {
+            unbinder!!.unbind()
+        }
+    }
+
+    /**
+     * initialize data
+     */
+    protected fun initData(): Boolean {
+        return true
+    }
+
+    /**
+     * 创建组建成功
+     *
+     * @param savedInstanceState activity保存状态
+     * @author LiuLun
+     * @Time 2015年11月9日下午2:49:00
+     */
+    fun initViews(savedInstanceState: Bundle?) {}
+
+    /**
+     * load data,maybe network load
+     */
+    fun initLoad() {}
+
+    public override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        if (!initData()) {
+            return
+        }
+        val layoutId = getLayoutId()
+        if (layoutId != 0 && layoutId != -1) {
+            setContentView(layoutId)
+        }
+        initViews(savedInstanceState)
+        initLoad()
+    }
+}

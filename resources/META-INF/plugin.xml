@@ -1,0 +1,49 @@
+<idea-plugin>
+    <id>com.newland.mvp.generator</id>
+    <name>MVP Kotlin Generator</name>
+    <version>1.0</version>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">newland.com</vendor>
+    <depends>org.jetbrains.android</depends>
+    <depends>org.jetbrains.plugins.gradle</depends>
+    <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+            <fileTemplateGroup implementation="com.newland.mvp.generator.FileTemplateProvider"/>
+    </extensions>
+
+    <actions>
+        <group id="com.newland.mvp.generator" text="MVP FOR KOTLIN" popup="true" icon="AllIcons.General.Add">
+            <add-to-group group-id="NewGroup" anchor="after" relative-to-action="NewDir"/>
+            <action id="com.newland.mvp.generator.CreateKotlinMvpActivityAction"
+                    class="com.newland.mvp.generator.CreateKotlinMvpActivityAction"
+                    text="MVP Kotlin Activity"/>
+
+            <action id="com.newland.mvp.generator.CreateKotlinMvpFragmentAction"
+                    class="com.newland.mvp.generator.CreateKotlinMvpFragmentAction"
+                    text="MVP Kotlin Fragment"/>
+
+            <action id="com.newland.mvp.generator.CreateKotlinDIBaseClassesAction"
+                    class="com.newland.mvp.generator.CreateKotlinDIBaseClassesAction"
+                    text="Kotlin base DI classes"/>
+        </group>
+    </actions>
+
+</idea-plugin>

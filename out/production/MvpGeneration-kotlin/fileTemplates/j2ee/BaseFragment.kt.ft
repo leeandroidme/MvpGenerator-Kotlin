@@ -1,0 +1,116 @@
+package ${PACKAGE_NAME}
+
+import android.app.Activity
+import android.content.Context
+import android.os.Bundle
+import android.support.v4.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import butterknife.ButterKnife
+import butterknife.Unbinder
+
+/**
+ * @author: leellun
+ * @data: 2019/2/18.
+ */
+abstract class BaseFragment : Fragment() {
+    var rootView: View? = null
+    private var mIsSupportUserVisibleHint: Boolean = false
+    private var mIsCheckDataPass = false
+    private var mIsAlreadyLoad = false
+    private var unbinder: Unbinder? = null
+    protected var activity: Activity? = null
+
+    /**
+     * 获取fragment布局
+     *
+     * @return fragment布局id
+     * @author LiuLun
+     * @Time 2015年11月10日上午10:26:34
+     */
+    abstract fun getLayoutId(): Int
+
+    /**
+     * 是否使用uservisiblehint
+     *
+     * @return
+     */
+    protected fun isSupportUserVisibleHint(): Boolean = false
+
+    protected fun setContentView(inflater: LayoutInflater, layoutId: Int) {
+        rootView = inflater.inflate(layoutId, null)
+        unbinder = ButterKnife.bind(this, rootView!!)
+    }
+
+
+    override fun onAttach(context: Context?) {
+        super.onAttach(context)
+        this.activity = getActivity()
+    }
+
+    override fun onDestroy() {
+        if (unbinder != null) {
+            unbinder!!.unbind()
+        }
+        super.onDestroy()
+    }
+
+    /**
+     * @return whether continue find views
+     * @Description initialize data
+     */
+    protected fun initData(): Boolean {
+        return true
+    }
+
+    /**
+     * use with [.getLayoutId]
+     */
+    protected fun initViews() {}
+
+    /**
+     * load data
+     */
+    protected abstract fun initLoad()
+
+    private fun loadData() {
+        if (mIsCheckDataPass && !mIsAlreadyLoad) {
+            if (mIsSupportUserVisibleHint && !userVisibleHint) return
+            synchronized(this) {
+                if (!mIsAlreadyLoad) {
+                    mIsAlreadyLoad = true
+                    initLoad()
+                }
+            }
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        onFragmentStart()
+        loadData()
+    }
+
+    protected fun onFragmentStart() {}
+
+    override fun setUserVisibleHint(isVisibleToUser: Boolean) {
+        super.setUserVisibleHint(isVisibleToUser)
+        if (isVisibleToUser && !mIsAlreadyLoad) {
+            loadData()
+        }
+    }
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val fragmentLayoutId = getLayoutId()
+        if (fragmentLayoutId != 0 && fragmentLayoutId != -1) {
+            setContentView(inflater, fragmentLayoutId)
+        }
+        mIsCheckDataPass = initData()
+        mIsSupportUserVisibleHint = isSupportUserVisibleHint()
+        if (mIsCheckDataPass) {
+            initViews()
+        }
+        return rootView
+    }
+}

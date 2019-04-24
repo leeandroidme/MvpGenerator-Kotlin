@@ -1,0 +1,12 @@
+package ${PACKAGE_NAME}
+
+import dagger.Module;
+import dagger.Provides;
+
+#parse("File Header.java")
+@Module
+class ${FRAGMENT_NAME}FragmentModule {
+
+    @Provides
+    fun providePresenterLoader(): ${FRAGMENT_NAME}FragmentContract.I${FRAGMENT_NAME}Presenter = ${FRAGMENT_NAME}FragmentPresenter()
+}
