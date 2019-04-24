@@ -1,4 +1,4 @@
-  @Binds
-  @IntoMap
-  @FragmentKey(${FRAGMENT_NAME}Fragment::class)
-  abstract fun bind${FRAGMENT_NAME}FragmentInjectorFactory(builder:${FRAGMENT_NAME}FragmentSubComponent.Builder):AndroidInjector.Factory<out Fragment>
+    @Binds
+    @IntoMap
+    @FragmentKey(${FRAGMENT_NAME}Fragment::class)
+    abstract fun bind${FRAGMENT_NAME}FragmentInjectorFactory(builder:${FRAGMENT_NAME}FragmentSubComponent.Builder):AndroidInjector.Factory<out Fragment>

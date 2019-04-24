@@ -19,3 +19,22 @@ activity.injector.factory.file=ActivitiesInjectorFactories(Activity dagger绑定
 fragment.injector.factory.file=FragmentsInjectorFactories(Fragment dagger绑定工厂)
 
 manifest.activity.tag.attrs=[key1=value1,key2=value2] manifest为自动注册的activity添加额外属性值，手动配置
+
+
+
+
+
+手动添加如下外置支持：
+
+```
+// Dagger 2
+implementation "com.google.dagger:dagger:$dagger_version"
+implementation "com.google.dagger:dagger-android:$dagger_version"
+implementation "com.google.dagger:dagger-android-support:$dagger_version"
+
+kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
+implementation 'com.jakewharton:butterknife:8.8.1'
+kapt 'com.jakewharton:butterknife-compiler:8.8.1'
+```
