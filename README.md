@@ -14,7 +14,7 @@ mvp.activity.package=MvpActivity所在包 默认自动配置
 
 mvp.fragment.package=MvpFragment所在包 默认自动配置
 
-activity.injector.factory.file=ActivitiesInjectorFactories(Activity dagger绑定工厂)文件地址，$PROJECT_DIR\\$/app/src/main/java/com/..../ActivitiesInjectorFactories.kt 默认自动配置
+activity.injector.factory.file=ActivitiesInjectorFactories(Activity dagger绑定工厂)文件地址，$PROJECT_DIR$/app/src/main/java/com/..../ActivitiesInjectorFactories.kt 默认自动配置
 
 fragment.injector.factory.file=FragmentsInjectorFactories(Fragment dagger绑定工厂)
 
