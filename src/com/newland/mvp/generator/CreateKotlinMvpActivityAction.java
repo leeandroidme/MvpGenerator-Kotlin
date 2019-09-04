@@ -22,6 +22,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+import static com.newland.mvp.generator.MvpGeneratorManager.GeneratorProperties.MVP_ACTIVITY_NAME;
+
 public class CreateKotlinMvpActivityAction extends AnAction {
     private ElementCreator myCreator;
 
@@ -87,6 +89,7 @@ public class CreateKotlinMvpActivityAction extends AnAction {
         Map<String, String> map = new HashMap<>();
         map.put("COMMON_PACKAGE", mvpProperties.getCommonPackage());
         map.put("MVP_ACTIVITY_PACKAGE", mvpProperties.getMvpActivityPackage());
+        map.put("MVP_ACTIVITY_NAME", mvpProperties.getProperty(MVP_ACTIVITY_NAME));
         this.createPsiClass(directory, activityName, fileTemplateManager, FileTemplateProvider.MVP_ACTIVITY, new HashMap<String, String>() {
             {
                 this.put("ACTIVITY_NAME", name);

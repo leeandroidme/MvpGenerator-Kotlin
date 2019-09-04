@@ -85,6 +85,7 @@ public class CreateKotlinMvpFragmentAction extends AnAction {
         Map<String, String> map = new HashMap<>();
         map.put("COMMON_PACKAGE", mvpProperties.getCommonPackage());
         map.put("MVP_FRAGMENT_PACKAGE", mvpProperties.getMvpFragmentPackage());
+        map.put("MVP_FRAGMENT_NAME", mvpProperties.getProperty(MvpGeneratorManager.GeneratorProperties.MVP_FRAGMENT_NAME));
         this.createPsiClass(directory, fragmentName, fileTemplateManager, FileTemplateProvider.MVP_FRAGMENT, new HashMap<String, String>() {
             {
                 this.put("FRAGMENT_NAME", name);

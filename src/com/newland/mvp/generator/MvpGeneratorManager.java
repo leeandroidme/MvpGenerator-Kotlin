@@ -78,6 +78,8 @@ public class MvpGeneratorManager {
         private static final String MVP_HELPER_PACKAGE = "mvp.helper.package";
         private static final String MVP_ACTIVITY_PACKAGE = "mvp.activity.package";
         private static final String MVP_FRAGMENT_PACKAGE = "mvp.fragment.package";
+        public static final String MVP_ACTIVITY_NAME = "mvp.activity.name";
+        public static final String MVP_FRAGMENT_NAME = "mvp.fragment.name";
         private static final String ACTIVITY_INJECTOR_FACTORY_FILE = "activity.injector.factory.file";
         private static final String FRAGMENT_INJECTOR_FACTORY_FILE = "fragment.injector.factory.file";
         private static final String MANIFEST_ACTIVITY_TAG_ATTRS = "manifest.activity.tag.attrs";

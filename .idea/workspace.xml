@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="217cc95e-5e2e-4ac9-b38a-8e0940c904f6" name="Default" comment="" />
+    <list default="true" id="217cc95e-5e2e-4ac9-b38a-8e0940c904f6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/newland/mvp/generator/CreateKotlinMvpActivityAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/newland/mvp/generator/CreateKotlinMvpActivityAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/newland/mvp/generator/CreateKotlinMvpFragmentAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/newland/mvp/generator/CreateKotlinMvpFragmentAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/newland/mvp/generator/MvpGeneratorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/newland/mvp/generator/MvpGeneratorManager.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FragmentPresenter.kt.ft" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FragmentPresenter.kt.ft" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/fileTemplates/j2ee/FragmentPresenter.kt.ft">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="114">
-              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -48,29 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InjectFactoryUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/newland/mvp/generator/InjectFactoryUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="9" column="41" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateKotlinMvpFragmentAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/newland/mvp/generator/CreateKotlinMvpFragmentAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="140" column="88" selection-start-line="140" selection-start-column="88" selection-end-line="140" selection-end-column="88" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CreateKotlinMvpActivityAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/newland/mvp/generator/CreateKotlinMvpActivityAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="141" column="74" selection-start-line="141" selection-start-column="74" selection-end-line="141" selection-end-column="74" />
+            <state relative-caret-position="284">
+              <caret line="91" column="71" selection-start-line="91" selection-start-column="71" selection-end-line="91" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,11 +65,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fragment.kt.ft" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/fileTemplates/j2ee/Fragment.kt.ft">
+      <file leaf-file-name="CreateKotlinMvpFragmentAction.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/newland/mvp/generator/CreateKotlinMvpFragmentAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="308">
+              <caret line="87" column="120" selection-start-line="87" selection-start-column="120" selection-end-line="87" selection-end-column="120" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="684">
+              <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MvpGeneratorManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/newland/mvp/generator/MvpGeneratorManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="80" column="35" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActivitiesInjectorFactories.kt.ft" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/fileTemplates/j2ee/ActivitiesInjectorFactories.kt.ft">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FragmentsInjectorFactories.kt.ft" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/fileTemplates/j2ee/FragmentsInjectorFactories.kt.ft">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -105,6 +128,9 @@
       <replace>public static final</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -117,7 +143,6 @@
         <option value="$PROJECT_DIR$/resources/fileTemplates/j2ee/FragmentContract.kt.ft" />
         <option value="$PROJECT_DIR$/resources/fileTemplates/j2ee/IView.kt.ft" />
         <option value="$PROJECT_DIR$/src/com/newland/mvp/generator/FileUtils.java" />
-        <option value="$PROJECT_DIR$/src/com/newland/mvp/generator/MvpGeneratorManager.java" />
         <option value="$PROJECT_DIR$/resources/fileTemplates/j2ee/IPresenter.kt.ft" />
         <option value="$PROJECT_DIR$/resources/fileTemplates/j2ee/Presenter.kt.ft" />
         <option value="$PROJECT_DIR$/resources/fileTemplates/j2ee/BaseFragment.kt.ft" />
@@ -132,15 +157,16 @@
         <option value="$PROJECT_DIR$/resources/fileTemplates/j2ee/ActivityModule.kt.ft" />
         <option value="$PROJECT_DIR$/resources/fileTemplates/j2ee/ActivitySubComponent.kt.ft" />
         <option value="$PROJECT_DIR$/src/com/newland/mvp/generator/InjectFactoryUtils.java" />
-        <option value="$PROJECT_DIR$/src/com/newland/mvp/generator/CreateKotlinMvpFragmentAction.java" />
-        <option value="$PROJECT_DIR$/src/com/newland/mvp/generator/CreateKotlinMvpActivityAction.java" />
         <option value="$PROJECT_DIR$/resources/fileTemplates/j2ee/Fragment.kt.ft" />
         <option value="$PROJECT_DIR$/resources/fileTemplates/j2ee/FragmentModule.kt.ft" />
         <option value="$PROJECT_DIR$/resources/fileTemplates/j2ee/FragmentSubComponent.kt.ft" />
         <option value="$PROJECT_DIR$/resources/fileTemplates/j2ee/FragmentsInjectorFactories.kt.ft" />
-        <option value="$PROJECT_DIR$/resources/fileTemplates/j2ee/ActivitiesInjectorFactories.kt.ft" />
         <option value="$PROJECT_DIR$/resources/fileTemplates/j2ee/FragmentBindInjectMethod.kt.ft" />
         <option value="$PROJECT_DIR$/resources/fileTemplates/j2ee/ActivityBindInjectMethod.kt.ft" />
+        <option value="$PROJECT_DIR$/resources/fileTemplates/j2ee/ActivitiesInjectorFactories.kt.ft" />
+        <option value="$PROJECT_DIR$/src/com/newland/mvp/generator/MvpGeneratorManager.java" />
+        <option value="$PROJECT_DIR$/src/com/newland/mvp/generator/CreateKotlinMvpActivityAction.java" />
+        <option value="$PROJECT_DIR$/src/com/newland/mvp/generator/CreateKotlinMvpFragmentAction.java" />
       </list>
     </option>
   </component>
@@ -165,6 +191,7 @@
     <option name="width" value="981" />
     <option name="height" value="1032" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -181,12 +208,6 @@
               <item name="MvpGeneration-kotlin" type="b2602c69:ProjectViewProjectNode" />
               <item name="MvpGeneration-kotlin" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MvpGeneration-kotlin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MvpGeneration-kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MvpGeneration-kotlin" type="b2602c69:ProjectViewProjectNode" />
@@ -213,7 +234,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane">
         <subPane>
@@ -226,6 +246,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -349,12 +370,17 @@
       <workItem from="1556003482352" duration="1968000" />
       <workItem from="1556005463863" duration="2706000" />
       <workItem from="1556070380166" duration="19856000" />
-      <workItem from="1556095500311" duration="2345000" />
+      <workItem from="1556095500311" duration="3349000" />
+      <workItem from="1556099746673" duration="2260000" />
+      <workItem from="1557728175844" duration="152000" />
+      <workItem from="1564544745417" duration="1201000" />
+      <workItem from="1567562781294" duration="83000" />
+      <workItem from="1567564270506" duration="121000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28501000" />
+    <option name="totallyTimeSpent" value="33322000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -362,7 +388,6 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -370,13 +395,12 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3539519" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1693989" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16003123" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -385,9 +409,11 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,13 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="28" column="93" selection-start-line="28" selection-start-column="93" selection-end-line="28" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/fileTemplates/j2ee/ActivityContract.kt.ft">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -577,17 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/newland/mvp/generator/MvpGeneratorManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="60" column="47" selection-start-line="60" selection-start-column="47" selection-end-line="60" selection-end-column="47" />
-          <folding>
-            <element signature="e#2288#2289#0" expanded="true" />
-            <element signature="e#2350#2351#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -684,25 +692,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/newland/mvp/generator/InjectFactoryUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
+        <state relative-caret-position="95">
           <caret line="9" column="41" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/newland/mvp/generator/CreateKotlinMvpFragmentAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="140" column="88" selection-start-line="140" selection-start-column="88" selection-end-line="140" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/newland/mvp/generator/CreateKotlinMvpActivityAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="141" column="74" selection-start-line="141" selection-start-column="74" selection-end-line="141" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -727,16 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/fileTemplates/j2ee/FragmentsInjectorFactories.kt.ft">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="e#25#220#0#kotlin" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/fileTemplates/j2ee/FragmentBindInjectMethod.kt.ft">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -751,20 +732,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/fileTemplates/j2ee/FragmentPresenter.kt.ft">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/fileTemplates/j2ee/ActivitiesInjectorFactories.kt.ft">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="114">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/fileTemplates/j2ee/FragmentsInjectorFactories.kt.ft">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/newland/mvp/generator/MvpGeneratorManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="80" column="35" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/newland/mvp/generator/CreateKotlinMvpActivityAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="91" column="71" selection-start-line="91" selection-start-column="71" selection-end-line="91" selection-end-column="71" />
           <folding>
-            <element signature="e#25#476#0#kotlin" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/fileTemplates/j2ee/FragmentPresenter.kt.ft">
+    <entry file="file://$PROJECT_DIR$/src/com/newland/mvp/generator/CreateKotlinMvpFragmentAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="308">
+          <caret line="87" column="120" selection-start-line="87" selection-start-column="120" selection-end-line="87" selection-end-column="120" />
         </state>
       </provider>
     </entry>
