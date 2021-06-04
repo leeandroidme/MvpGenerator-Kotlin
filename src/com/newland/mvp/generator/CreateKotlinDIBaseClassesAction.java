@@ -6,6 +6,7 @@ import com.intellij.ide.fileTemplates.FileTemplateUtil;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.module.Module;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.PsiDirectory;
 
@@ -84,6 +85,7 @@ public class CreateKotlinDIBaseClassesAction extends AnAction {
         String basePackage = FileUtils.getPackage(baseDirectory.getVirtualFile().getPath() + File.separator + FileTemplateProvider.MVP_BASE_ACTIVITY);
 
         String factoryPath = directory.findSubdirectory(NAME_DIR_FACTORIES).getVirtualFile().getPath().replace(module.getProject().getBasePath(), "$PROJECT_DIR$");
+
         Map<String, String> map = new HashMap<>();
         map.put("mvp.helper.package", mvpHelperPackage);
         map.put("mvp.activity.package", basePackage);
@@ -96,6 +98,7 @@ public class CreateKotlinDIBaseClassesAction extends AnAction {
     private void createFile(final PsiDirectory directory, final String name, final String rootPackage, final FileTemplateManager fileTemplateManager, final String templateName) {
         final FileTemplate template = fileTemplateManager.getJ2eeTemplate(templateName);
         final Properties props = fileTemplateManager.getDefaultProperties();
+        FileUtils.checkTemplaeProperties(directory, props);
         props.put("ROOT_NAME", rootPackage);
         try {
             FileTemplateUtil.createFromTemplate(template, name, props, directory);

@@ -1,4 +1,4 @@
-package com.newland.cmt.di.base
+package ${PACKAGE_NAME}
 
 import android.app.Activity
 import android.os.Bundle

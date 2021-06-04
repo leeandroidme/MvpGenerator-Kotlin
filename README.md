@@ -34,7 +34,4 @@ implementation "com.google.dagger:dagger-android-support:$dagger_version"
 
 kapt "com.google.dagger:dagger-android-processor:$dagger_version"
 kapt "com.google.dagger:dagger-compiler:$dagger_version"
-
-implementation 'com.jakewharton:butterknife:8.8.1'
-kapt 'com.jakewharton:butterknife-compiler:8.8.1'
 ```

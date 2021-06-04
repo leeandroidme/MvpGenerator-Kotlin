@@ -45,7 +45,7 @@ public class MvpGeneratorManager {
             properties.put("PROJECT_PATH", module.getProject().getBasePath());
             properties.put("MODULE_PATH", modelBasePath);
         } catch (IOException e) {
-            throw new RuntimeException("Can not find mvpgenerator.properties in project or current module", e);
+//            throw new RuntimeException("Can not find mvpgenerator.properties in project or current module", e);
         }
         return properties;
     }

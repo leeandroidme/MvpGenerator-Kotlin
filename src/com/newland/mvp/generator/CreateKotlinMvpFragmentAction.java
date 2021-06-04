@@ -118,6 +118,7 @@ public class CreateKotlinMvpFragmentAction extends AnAction {
                 this.putAll(map);
 
                 Properties properties = fileTemplateManager.getDefaultProperties();
+                FileUtils.checkTemplaeProperties(directory,properties);
                 properties.put("FRAGMENT_NAME", name);
                 String bindMethodStr = "";
                 try {
@@ -141,6 +142,7 @@ public class CreateKotlinMvpFragmentAction extends AnAction {
     private void createPsiClass(final PsiDirectory directory, final String name, final FileTemplateManager fileTemplateManager, final String templateName, final Map<String, String> properties) {
         final FileTemplate template = fileTemplateManager.getJ2eeTemplate(templateName);
         final Properties props = fileTemplateManager.getDefaultProperties();
+        FileUtils.checkTemplaeProperties(directory,props);
         props.putAll(properties);
         try {
             FileTemplateUtil.createFromTemplate(template, name, props, directory);

@@ -9,6 +9,7 @@ import com.intellij.ide.fileTemplates.FileTemplateUtil;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.module.Module;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.PsiDirectory;
 import com.intellij.psi.PsiElement;
@@ -90,6 +91,7 @@ public class CreateKotlinMvpActivityAction extends AnAction {
         map.put("COMMON_PACKAGE", mvpProperties.getCommonPackage());
         map.put("MVP_ACTIVITY_PACKAGE", mvpProperties.getMvpActivityPackage());
         map.put("MVP_ACTIVITY_NAME", mvpProperties.getProperty(MVP_ACTIVITY_NAME));
+        Messages.showMessageDialog("con", "aa", Messages.getInformationIcon());
         this.createPsiClass(directory, activityName, fileTemplateManager, FileTemplateProvider.MVP_ACTIVITY, new HashMap<String, String>() {
             {
                 this.put("ACTIVITY_NAME", name);
@@ -121,6 +123,7 @@ public class CreateKotlinMvpActivityAction extends AnAction {
                 this.put("ACTIVITY_NAME", name);
                 this.putAll(map);
                 Properties properties = fileTemplateManager.getDefaultProperties();
+                FileUtils.checkTemplaeProperties(directory,properties);
                 properties.put("ACTIVITY_NAME", name);
                 String bindMethodStr = "";
                 try {
@@ -140,6 +143,7 @@ public class CreateKotlinMvpActivityAction extends AnAction {
         });
         this.createLayoutFile(name, layoutName, androidFacet, psiManager, fileTemplateManager, mvpProperties);
         final Properties properties = fileTemplateManager.getDefaultProperties();
+        FileUtils.checkTemplaeProperties(directory,properties);
         FileTemplateUtil.fillDefaultProperties(properties, directory);
         final String activityClass = properties.getProperty("PACKAGE_NAME") + "." + activityName;
         this.registerActivity(androidFacet, activityClass, mvpProperties);
@@ -149,6 +153,7 @@ public class CreateKotlinMvpActivityAction extends AnAction {
     private void createPsiClass(final PsiDirectory directory, final String name, final FileTemplateManager fileTemplateManager, final String templateName, final Map<String, String> properties) {
         final FileTemplate template = fileTemplateManager.getJ2eeTemplate(templateName);
         final Properties props = fileTemplateManager.getDefaultProperties();
+        FileUtils.checkTemplaeProperties(directory,props);
         props.putAll(properties);
         try {
             FileTemplateUtil.createFromTemplate(template, name, props, directory);

@@ -3,6 +3,7 @@ package com.newland.mvp.generator;
 import com.intellij.ide.fileTemplates.FileTemplateManager;
 import com.intellij.ide.fileTemplates.FileTemplateUtil;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.ui.popup.JBPopupFactory;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.PsiDirectory;
@@ -11,7 +12,6 @@ import com.intellij.psi.PsiManager;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
 import java.util.Properties;
 
@@ -19,7 +19,18 @@ public final class FileUtils {
     public static String getSelectedDirectoryPath(final FileTemplateManager fileTemplateManager, final PsiDirectory directory) {
         final Properties properties = fileTemplateManager.getDefaultProperties();
         FileTemplateUtil.fillDefaultProperties(properties, directory);
+        checkTemplaeProperties(directory, properties);
         return properties.getProperty("PACKAGE_NAME");
+    }
+
+    public static void checkTemplaeProperties(PsiDirectory directory, Properties properties) {
+        if (StringUtils.isEmpty(properties.getProperty("PACKAGE_NAME"))) {
+            String path = directory.getVirtualFile().getPath();
+            String packageRoot = "java";
+            String relativePath = path.substring(path.indexOf(packageRoot) + packageRoot.length() + 1);
+            String packagename = relativePath.replaceAll("\\\\", ".").replaceAll("/", ".");
+            properties.setProperty("PACKAGE_NAME", packagename);
+        }
     }
 
     public static PsiDirectory validateSelectedDirectory(final Project project, final VirtualFile targetFile) {

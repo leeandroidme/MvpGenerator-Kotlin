@@ -9,7 +9,7 @@ import dagger.multibindings.IntoMap
 
 
 #parse("File Header.java")
-@Module(subcomponents = {})
+@Module(subcomponents = arrayOf())
 abstract class ActivitiesInjectorFactories {
 
     //TODO bind your activities' injection factories here
