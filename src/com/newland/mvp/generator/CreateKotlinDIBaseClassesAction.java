@@ -32,8 +32,8 @@ public class CreateKotlinDIBaseClassesAction extends AnAction {
     private static final String NAME_FILE_IVIEW = "IView";
     private static final String NAME_FILE_BASEACTIVITY = "BaseActivity";
     private static final String NAME_FILE_BASEFRAGMENT = "BaseFragment";
-    private static final String NAME_FILE_MVPACTIVITY = "MvpActivity";
-    private static final String NAME_FILE_MVPFRAGMENT = "MvpFragment";
+    private static final String NAME_FILE_MVPACTIVITY = "BaseMvpActivity";
+    private static final String NAME_FILE_MVPFRAGMENT = "BaseMvpFragment";
 
     public void actionPerformed(final AnActionEvent e) {
         final Project project = e.getProject();
@@ -90,6 +90,8 @@ public class CreateKotlinDIBaseClassesAction extends AnAction {
         map.put("mvp.helper.package", mvpHelperPackage);
         map.put("mvp.activity.package", basePackage);
         map.put("mvp.fragment.package", basePackage);
+        map.put("mvp.activity.name", NAME_FILE_MVPACTIVITY);
+        map.put("mvp.fragment.name", NAME_FILE_MVPFRAGMENT);
         map.put("activity.injector.factory.file", factoryPath + "/" + FileTemplateProvider.DI_BASE_ACTIVITIES_INJECTOR_FACTORIES);
         map.put("fragment.injector.factory.file", factoryPath + "/" + FileTemplateProvider.DI_BASE_FRAGMENTS_INJECTOR_FACTORIES);
         MvpGeneratorManager.getInstance().writeMvpProperties(module, map);

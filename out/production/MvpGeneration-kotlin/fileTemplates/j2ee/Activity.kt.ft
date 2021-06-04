@@ -1,10 +1,10 @@
 package ${PACKAGE_NAME}
 
 import ${PROJECT_PACKAGE}.R
-import ${MVP_ACTIVITY_PACKAGE}.MvpActivity
+import ${MVP_ACTIVITY_PACKAGE}.BaseMvpActivity
 
 #parse("File Header.java")
-class ${ACTIVITY_NAME}Activity : MvpActivity<${ACTIVITY_NAME}ActivityContract.I${ACTIVITY_NAME}Presenter, ${ACTIVITY_NAME}ActivityContract.I${ACTIVITY_NAME}View>(), ${ACTIVITY_NAME}ActivityContract.I${ACTIVITY_NAME}View {
+class ${ACTIVITY_NAME}Activity : BaseMvpActivity<${ACTIVITY_NAME}ActivityContract.I${ACTIVITY_NAME}Presenter, ${ACTIVITY_NAME}ActivityContract.I${ACTIVITY_NAME}View>(), ${ACTIVITY_NAME}ActivityContract.I${ACTIVITY_NAME}View {
     @Override
     override fun getLayoutId(): Int = R.layout.${LAYOUT_NAME}
 

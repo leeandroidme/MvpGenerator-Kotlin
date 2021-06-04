@@ -7,8 +7,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import butterknife.ButterKnife
-import butterknife.Unbinder
 
 /**
  * @author: leellun
@@ -19,7 +17,6 @@ abstract class BaseFragment : Fragment() {
     private var mIsSupportUserVisibleHint: Boolean = false
     private var mIsCheckDataPass = false
     private var mIsAlreadyLoad = false
-    private var unbinder: Unbinder? = null
     protected var activity: Activity? = null
 
     /**
@@ -40,7 +37,6 @@ abstract class BaseFragment : Fragment() {
 
     protected fun setContentView(inflater: LayoutInflater, layoutId: Int) {
         rootView = inflater.inflate(layoutId, null)
-        unbinder = ButterKnife.bind(this, rootView!!)
     }
 
 
@@ -50,9 +46,6 @@ abstract class BaseFragment : Fragment() {
     }
 
     override fun onDestroy() {
-        if (unbinder != null) {
-            unbinder!!.unbind()
-        }
         super.onDestroy()
     }
 

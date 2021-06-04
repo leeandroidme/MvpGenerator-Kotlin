@@ -32,8 +32,8 @@ public class FileTemplateProvider implements FileTemplateGroupDescriptorFactory 
     public static final String MVP_HELPER_IVIEW = "IView.kt";
     public static final String MVP_BASE_ACTIVITY = "BaseActivity.kt";
     public static final String MVP_BASE_FRAGMENT = "BaseFragment.kt";
-    public static final String MVP_MVP_ACTIVITY = "MvpActivity.kt";
-    public static final String MVP_MVP_FRAGMENT = "MvpFragment.kt";
+    public static final String MVP_MVP_ACTIVITY = "BaseMvpActivity.kt";
+    public static final String MVP_MVP_FRAGMENT = "BaseMvpFragment.kt";
 
     public FileTemplateGroupDescriptor getFileTemplatesDescriptor() {
         final FileTemplateGroupDescriptor group = new FileTemplateGroupDescriptor("MVP", StdFileTypes.JAVA.getIcon());

@@ -17,7 +17,6 @@ abstract class BaseFragment : Fragment() {
     private var mIsSupportUserVisibleHint: Boolean = false
     private var mIsCheckDataPass = false
     private var mIsAlreadyLoad = false
-    private var unbinder: Unbinder? = null
     protected var activity: Activity? = null
 
     /**
@@ -47,9 +46,6 @@ abstract class BaseFragment : Fragment() {
     }
 
     override fun onDestroy() {
-        if (unbinder != null) {
-            unbinder!!.unbind()
-        }
         super.onDestroy()
     }
 

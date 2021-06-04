@@ -10,7 +10,6 @@ import android.view.View
  */
 abstract class BaseActivity : Activity() {
 
-    private var unbinder: Unbinder? = null
     /**
      * @return 当前activity
      * @Time 2015年12月7日下午5:56:27
@@ -35,10 +34,6 @@ abstract class BaseActivity : Activity() {
 
     public override fun onDestroy() {
         super.onDestroy()
-
-        if (unbinder != null) {
-            unbinder!!.unbind()
-        }
     }
 
     /**

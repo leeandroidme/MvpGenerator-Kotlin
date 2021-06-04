@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 import dagger.android.AndroidInjection
 
-abstract class MvpActivity<PRESENTER : IPresenter<IVIEW>, IVIEW> : BaseActivity() {
+abstract class BaseMvpActivity<PRESENTER : IPresenter<IVIEW>, IVIEW> : BaseActivity() {
 
     @Inject
     protected lateinit var presenter: PRESENTER
