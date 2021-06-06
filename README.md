@@ -25,7 +25,10 @@ manifest.activity.tag.attrs=[key1=value1,key2=value2] manifest为自动注册的
 
 
 手动添加如下外置支持：
-
+```
+//kapt插件支持
+apply plugin: 'kotlin-kapt'
+```
 ```
 // Dagger 2
 implementation "com.google.dagger:dagger:$dagger_version"
