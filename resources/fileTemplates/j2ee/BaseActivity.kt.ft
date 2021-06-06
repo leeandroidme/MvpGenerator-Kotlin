@@ -1,14 +1,14 @@
 package ${PACKAGE_NAME}
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 
 /**
  * @author: leellun
  * @data: 2018/12/19.
  */
-abstract class BaseActivity : Activity() {
+abstract class BaseActivity : AppCompatActivity() {
 
     /**
      * @return 当前activity
