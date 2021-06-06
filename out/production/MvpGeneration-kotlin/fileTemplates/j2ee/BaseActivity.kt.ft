@@ -50,7 +50,7 @@ abstract class BaseActivity : Activity() {
      * @author LiuLun
      * @Time 2015年11月9日下午2:49:00
      */
-    fun initViews(savedInstanceState: Bundle?) {}
+    open fun initViews(savedInstanceState: Bundle?) {}
 
     /**
      * load data,maybe network load

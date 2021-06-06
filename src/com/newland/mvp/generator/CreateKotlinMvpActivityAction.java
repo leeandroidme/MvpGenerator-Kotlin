@@ -91,7 +91,7 @@ public class CreateKotlinMvpActivityAction extends AnAction {
         map.put("COMMON_PACKAGE", mvpProperties.getCommonPackage());
         map.put("MVP_ACTIVITY_PACKAGE", mvpProperties.getMvpActivityPackage());
         map.put("MVP_ACTIVITY_NAME", mvpProperties.getProperty(MVP_ACTIVITY_NAME));
-        this.createPsiClass(directory, activityName, fileTemplateManager, FileTemplateProvider.MVP_ACTIVITY, new HashMap<String, String>() {
+        FileTemplateProvider.createPsiClass(directory, activityName, fileTemplateManager, FileTemplateProvider.MVP_ACTIVITY, new HashMap<String, String>() {
             {
                 this.put("ACTIVITY_NAME", name);
                 this.put("LAYOUT_NAME", layoutName);
@@ -99,25 +99,25 @@ public class CreateKotlinMvpActivityAction extends AnAction {
                 this.putAll(map);
             }
         });
-        this.createPsiClass(directory, activityContractName, fileTemplateManager, FileTemplateProvider.MVP_ACTIVITY_CONTRACT, new HashMap<String, String>() {
+        FileTemplateProvider.createPsiClass(directory, activityContractName, fileTemplateManager, FileTemplateProvider.MVP_ACTIVITY_CONTRACT, new HashMap<String, String>() {
             {
                 this.put("ACTIVITY_NAME", name);
                 this.putAll(map);
             }
         });
-        this.createPsiClass(directory, activityModuleName, fileTemplateManager, FileTemplateProvider.MVP_ACTIVITY_MODULE, new HashMap<String, String>() {
+        FileTemplateProvider.createPsiClass(directory, activityModuleName, fileTemplateManager, FileTemplateProvider.MVP_ACTIVITY_MODULE, new HashMap<String, String>() {
             {
                 this.put("ACTIVITY_NAME", name);
                 this.putAll(map);
             }
         });
-        this.createPsiClass(directory, activityPresenterName, fileTemplateManager, FileTemplateProvider.MVP_ACTIVITY_PRESENTER, new HashMap<String, String>() {
+        FileTemplateProvider.createPsiClass(directory, activityPresenterName, fileTemplateManager, FileTemplateProvider.MVP_ACTIVITY_PRESENTER, new HashMap<String, String>() {
             {
                 this.put("ACTIVITY_NAME", name);
                 this.putAll(map);
             }
         });
-        this.createPsiClass(directory, activitySubComponentName, fileTemplateManager, FileTemplateProvider.MVP_ACTIVITY_SUB_COMPONENT, new HashMap<String, String>() {
+        FileTemplateProvider.createPsiClass(directory, activitySubComponentName, fileTemplateManager, FileTemplateProvider.MVP_ACTIVITY_SUB_COMPONENT, new HashMap<String, String>() {
             {
                 this.put("ACTIVITY_NAME", name);
                 this.putAll(map);
@@ -146,19 +146,6 @@ public class CreateKotlinMvpActivityAction extends AnAction {
         FileTemplateUtil.fillDefaultProperties(properties, directory);
         final String activityClass = properties.getProperty("PACKAGE_NAME") + "." + activityName;
         this.registerActivity(androidFacet, activityClass, mvpProperties);
-    }
-
-
-    private void createPsiClass(final PsiDirectory directory, final String name, final FileTemplateManager fileTemplateManager, final String templateName, final Map<String, String> properties) {
-        final FileTemplate template = fileTemplateManager.getJ2eeTemplate(templateName);
-        final Properties props = fileTemplateManager.getDefaultProperties();
-        FileUtils.checkTemplaeProperties(directory, props);
-        props.putAll(properties);
-        try {
-            FileTemplateUtil.createFromTemplate(template, name, props, directory);
-        } catch (Exception e) {
-            throw new RuntimeException("Unable to create template for " + name + "Activity", e);
-        }
     }
 
     private void createLayoutFile(final String name, final String layoutName, final AndroidFacet androidFacet, final PsiManager psiManager, final FileTemplateManager fileTemplateManager, MvpGeneratorManager.GeneratorProperties mvpProperties) {
